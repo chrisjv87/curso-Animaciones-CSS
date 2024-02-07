@@ -228,17 +228,21 @@
                 top: 10px;
 
                 animation-name: blink;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
             }
 
             @keyframes blink {
                 0% {
-
+                    height: 4px;
                 }
                 5% {
-
+                    transform: translate(0px, 2px);
+                    height: 1px;
                 }
                 10% {
-                    
+                    transform: translate(0px, 0px);
+                    height: 4px;
                 }
             }
 
@@ -311,3 +315,12 @@
         </div>
     </body>
 </html>
+<!-- 
+Propiedades para la duración de la animación ⌚
+En este artículo veremos dos propiedades, las cuales su definición es la siguiente:
+
+Propiedad animation-duration ⌛
+Nos indica cuanto durará nuestra animación, solo recibe un valor que sería el tiempo, puede estar en segundos, milisegundos, etc. Los cuales serían: :::(Info) animation-duration: time | initial | inherit; :::
+
+Propiedad animation-iteration-count ⌛
+Nos indica cuantas veces se repetirá nuestra animación, también recibe solo un valor, y pueden ser los siguientes: :::(Info) animation-timing-function: linear | ease | ease-in | ease-out | ease-in-out | step-start | step-end | steps(int, start | end) | cubicbezier(n, n, n, n) | initial | inherit; ::: -->
