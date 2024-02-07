@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                counter-reset: game;
+            }
+
+            input:checked {
+                counter-increment: game;
+            }
+
+            .total-count::after {
+                content: counter(game);
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><input type="checkbox"><div class="shield"></div></li>
+            <li><input type="checkbox"><div class="shield"></div></li>
+            <li><input type="checkbox"><div class="shield"></div></li>
+            <li><input type="checkbox"><div class="shield"></div></li>
+            <li><input type="checkbox"><div class="shield"></div></li>
+            <li><input type="checkbox"><div class="shield"></div></li>
+            <li><input type="checkbox"><div class="shield"></div></li>
+            <li><input type="checkbox"><div class="shield"></div></li>
+        </ul>
+        <h3 class="total-count">Score: </h3>
+    </body>
+</html>
+<!-- 
+¿Qué es una animación? 🎭
+Una animación podría ser descrita como un conjunto de fotogramas que cuenten con un estado inicial y final, compuesto de distintos puntos medios que conforman la misma. Además, desde pequeños nuestros ojos 👀 han sido entrenados de forma involuntario al momento de ver las caricaturas a través del televisor.
+
+Principios de animación para la web 💻
+Actualmente, en el desarrollo web, podemos contar con diversas animaciones realizadas en su mayoría con CSS. Para ello, existen principios a seguir, que se crearon con el fin de optimizar y aprovechar al máximo esta función. Estos principios describen cómo se puede utilizar la animación para sumergir a los espectadores en un mundo creíble 👓. Un dato interesante, es que dichos principios fueron utilizados como metodología de trabajo para las animaciones que Disney diseñaba en aquellos tiempos.
+
+Entre ellos tenemos (estarán mencionados en su lengua original):
+
+Squash and stretch
+Anticipation
+Staging
+Straight-Ahead Action and Pose-to-Pose
+Follow Through and Overlapping Action
+Slow In and Slow Out
+Arc
+Secondary Action
+Timing
+Exaggeration
+Solid drawing
+Appeal 
+
+Counter en CSS 🧮
+Los contadores de CSS, nos permite numerar automáticamente la apariencia de un contenido, cuyo valor puede tanto disminuir como aumentar, como una variable, mediante reglas CSS que capturan cuántas veces se usa.
+
+Entre sus propiedades tenemos:
+
+counter-reset: Crea o reinicia un contador.
+counter-increment: Incrementa un valor del contador.
+content: Inserta el contenido generado (debe usarse con un pseudoelemento).
+counter(): Función que agrega el valor de un contador a un elemento.
+Una vez explicado ello, dentro de la etiqueta \, colocaremos el siguiente código.
+
+-->
