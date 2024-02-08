@@ -6,13 +6,23 @@
         <title>Document</title>
         <style>
             body {
+                display: grid;
                 margin: 0;
                 height: 100vh;
                 width: 100%;
                 display: grid;
                 place-items: center;
+                counter-reset: score;
             }
 
+            input:checked {
+                counter-increment: score;
+            }
+
+            .score::after {
+                content: counter(score);
+            }
+            
             .phone {
                 position: relative;
                 border: 8px solid black;
@@ -21,8 +31,10 @@
                 width: 300px;
                 background: #CCEFFF;
                 box-shadow: 0 19px 38px rgb(0, 0, 0, 0.30), 0 15px 12px rgb(0, 0, 0, 0.20);
+                text-align: center;
+                font-size: 20px;
             }
-
+            
             .layer-1 {
                 position: absolute;
                 z-index: 1;
@@ -124,6 +136,8 @@
                 border: 2px solid black;
                 border-top-left-radius: 5%;
                 border-top-right-radius: 5%;
+                border-bottom-left-radius: 15%;
+
             }
             .layer-5__inner {
                 height: 50px;
@@ -162,6 +176,7 @@
                 border: 2px solid black;
                 border-top-left-radius: 5%;
                 border-top-right-radius: 5%;
+                border-bottom-right-radius: 15%;
             }
             .layer-7__inner {
                 height: 50px;
@@ -200,6 +215,7 @@
                 bottom: 0;
                 border: 2px solid black;
                 border-top-right-radius: 80%;
+                border-bottom-left-radius: 30%;
             }
             .layer-10 {
                 position: absolute;
@@ -211,7 +227,7 @@
                 bottom: 0;
                 border: 2px solid black;
                 border-top-left-radius: 80%;
-
+                border-bottom-right-radius: 30%;
             }
 
             .left-ear--outer {
@@ -358,14 +374,23 @@
             <div class="layer-9"></div>
             <div class="layer-10"></div>
         </div>
+        <h3 class="score">Score: </h3>
     </body>
 </html>
-<!-- 
-Propiedades para la duración de la animación ⌚
-En este artículo veremos dos propiedades, las cuales su definición es la siguiente:
+<!-- Propiedades 🎯
+Animation Direction 🗽
+Dirección de la animación.
 
-Propiedad animation-duration ⌛
-Nos indica cuanto durará nuestra animación, solo recibe un valor que sería el tiempo, puede estar en segundos, milisegundos, etc. Los cuales serían: :::(Info) animation-duration: time | initial | inherit; :::
+Normal: La animación se reproduce hacia delante en cada ciclo. Por defecto.
+Reverse: La animación se reproduce hacia atrás en cada ciclo.
+Alternate: La animación se invierte en cada ciclo, y la primera iteración se reproduce hacia adelante.
+Alternate-reverse: La animación invierte la dirección en cada ciclo, y la primera iteración se reproduce hacia atrás.
+Animation Fill Mode 📢
+Estado de cierta animación. Al inicio o final.
 
-Propiedad animation-iteration-count ⌛
-Nos indica cuantas veces se repetirá nuestra animación, también recibe solo un valor, y pueden ser los siguientes: :::(Info) animation-timing-function: linear | ease | ease-in | ease-out | ease-in-out | step-start | step-end | steps(int, start | end) | cubicbezier(n, n, n, n) | initial | inherit; ::: -->
+Animation Play State ⏯
+Define si la animación se reproduce o es pausada. (running or paused)
+
+Una vez tengamos aplicada estas últimas propiedades, tendríamos listo nuestro proyecto, el cual podrás verlo aquí{target="_blank"}.
+
+Hemos visto en este módulo, muchísimas propiadades para terminar nuestra animación. Falta muy poco para terminar 🎊. -->
